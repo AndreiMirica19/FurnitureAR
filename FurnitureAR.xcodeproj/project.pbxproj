@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E25CA3C2933776900CC29DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3B2933776900CC29DC /* AppDelegate.swift */; };
+		2E25CA3E2933776900CC29DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3D2933776900CC29DC /* ContentView.swift */; };
+		2E25CA402933776900CC29DC /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3F2933776900CC29DC /* Experience.rcproject */; };
+		2E25CA422933776B00CC29DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E25CA412933776B00CC29DC /* Assets.xcassets */; };
+		2E25CA452933776B00CC29DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E25CA442933776B00CC29DC /* Preview Assets.xcassets */; };
+		2E25CA4F293377B300CC29DC /* desk3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2E25CA4C293377B300CC29DC /* desk3.usdz */; };
+		2E25CA50293377B300CC29DC /* BathroomDrawers.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2E25CA4D293377B300CC29DC /* BathroomDrawers.usdz */; };
+		2E25CA51293377B300CC29DC /* Desk.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2E25CA4E293377B300CC29DC /* Desk.usdz */; };
+		2E25CA542933781200CC29DC /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA522933781200CC29DC /* ProductView.swift */; };
+		2E25CA552933781200CC29DC /* TryOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA532933781200CC29DC /* TryOnView.swift */; };
+		2E25CA592933781B00CC29DC /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA562933781B00CC29DC /* CatalogueView.swift */; };
+		2E25CA5A2933781B00CC29DC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA572933781B00CC29DC /* CartView.swift */; };
+		2E25CA5B2933781B00CC29DC /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA582933781B00CC29DC /* CategoryView.swift */; };
+		2E25CA5E29337BEE00CC29DC /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA5D29337BEE00CC29DC /* ThumbnailGenerator.swift */; };
+		2E25CA62293395F500CC29DC /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA61293395F500CC29DC /* Furniture.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E25CA382933776900CC29DC /* FurnitureAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E25CA3B2933776900CC29DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E25CA3D2933776900CC29DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2E25CA3F2933776900CC29DC /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		2E25CA412933776B00CC29DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E25CA442933776B00CC29DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E25CA4C293377B300CC29DC /* desk3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = desk3.usdz; sourceTree = "<group>"; };
+		2E25CA4D293377B300CC29DC /* BathroomDrawers.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = BathroomDrawers.usdz; sourceTree = "<group>"; };
+		2E25CA4E293377B300CC29DC /* Desk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Desk.usdz; sourceTree = "<group>"; };
+		2E25CA522933781200CC29DC /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		2E25CA532933781200CC29DC /* TryOnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryOnView.swift; sourceTree = "<group>"; };
+		2E25CA562933781B00CC29DC /* CatalogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
+		2E25CA572933781B00CC29DC /* CartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		2E25CA582933781B00CC29DC /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		2E25CA5D29337BEE00CC29DC /* ThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGenerator.swift; sourceTree = "<group>"; };
+		2E25CA61293395F500CC29DC /* Furniture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furniture.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E25CA352933776900CC29DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E25CA2F2933776900CC29DC = {
+			isa = PBXGroup;
+			children = (
+				2E25CA3A2933776900CC29DC /* FurnitureAR */,
+				2E25CA392933776900CC29DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E25CA392933776900CC29DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E25CA382933776900CC29DC /* FurnitureAR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E25CA3A2933776900CC29DC /* FurnitureAR */ = {
+			isa = PBXGroup;
+			children = (
+				2E25CA5C29337A1C00CC29DC /* Views */,
+				2E25CA3B2933776900CC29DC /* AppDelegate.swift */,
+				2E25CA3D2933776900CC29DC /* ContentView.swift */,
+				2E25CA4B293377B300CC29DC /* Furniture */,
+				2E25CA3F2933776900CC29DC /* Experience.rcproject */,
+				2E25CA412933776B00CC29DC /* Assets.xcassets */,
+				2E25CA432933776B00CC29DC /* Preview Content */,
+				2E25CA5D29337BEE00CC29DC /* ThumbnailGenerator.swift */,
+				2E25CA61293395F500CC29DC /* Furniture.swift */,
+			);
+			path = FurnitureAR;
+			sourceTree = "<group>";
+		};
+		2E25CA432933776B00CC29DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2E25CA442933776B00CC29DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2E25CA4B293377B300CC29DC /* Furniture */ = {
+			isa = PBXGroup;
+			children = (
+				2E25CA4C293377B300CC29DC /* desk3.usdz */,
+				2E25CA4D293377B300CC29DC /* BathroomDrawers.usdz */,
+				2E25CA4E293377B300CC29DC /* Desk.usdz */,
+			);
+			path = Furniture;
+			sourceTree = "<group>";
+		};
+		2E25CA5C29337A1C00CC29DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E25CA572933781B00CC29DC /* CartView.swift */,
+				2E25CA562933781B00CC29DC /* CatalogueView.swift */,
+				2E25CA582933781B00CC29DC /* CategoryView.swift */,
+				2E25CA522933781200CC29DC /* ProductView.swift */,
+				2E25CA532933781200CC29DC /* TryOnView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E25CA372933776900CC29DC /* FurnitureAR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E25CA482933776B00CC29DC /* Build configuration list for PBXNativeTarget "FurnitureAR" */;
+			buildPhases = (
+				2E25CA342933776900CC29DC /* Sources */,
+				2E25CA352933776900CC29DC /* Frameworks */,
+				2E25CA362933776900CC29DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FurnitureAR;
+			productName = FurnitureAR;
+			productReference = 2E25CA382933776900CC29DC /* FurnitureAR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E25CA302933776900CC29DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					2E25CA372933776900CC29DC = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 2E25CA332933776900CC29DC /* Build configuration list for PBXProject "FurnitureAR" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E25CA2F2933776900CC29DC;
+			productRefGroup = 2E25CA392933776900CC29DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E25CA372933776900CC29DC /* FurnitureAR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E25CA362933776900CC29DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E25CA50293377B300CC29DC /* BathroomDrawers.usdz in Resources */,
+				2E25CA452933776B00CC29DC /* Preview Assets.xcassets in Resources */,
+				2E25CA4F293377B300CC29DC /* desk3.usdz in Resources */,
+				2E25CA422933776B00CC29DC /* Assets.xcassets in Resources */,
+				2E25CA51293377B300CC29DC /* Desk.usdz in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E25CA342933776900CC29DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E25CA542933781200CC29DC /* ProductView.swift in Sources */,
+				2E25CA5A2933781B00CC29DC /* CartView.swift in Sources */,
+				2E25CA552933781200CC29DC /* TryOnView.swift in Sources */,
+				2E25CA592933781B00CC29DC /* CatalogueView.swift in Sources */,
+				2E25CA3E2933776900CC29DC /* ContentView.swift in Sources */,
+				2E25CA5E29337BEE00CC29DC /* ThumbnailGenerator.swift in Sources */,
+				2E25CA3C2933776900CC29DC /* AppDelegate.swift in Sources */,
+				2E25CA62293395F500CC29DC /* Furniture.swift in Sources */,
+				2E25CA5B2933781B00CC29DC /* CategoryView.swift in Sources */,
+				2E25CA402933776900CC29DC /* Experience.rcproject in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2E25CA462933776B00CC29DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E25CA472933776B00CC29DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E25CA492933776B00CC29DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FurnitureAR/Preview Content\"";
+				DEVELOPMENT_TEAM = 2X7QCM3SWG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FurnitureAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E25CA4A2933776B00CC29DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FurnitureAR/Preview Content\"";
+				DEVELOPMENT_TEAM = 2X7QCM3SWG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FurnitureAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E25CA332933776900CC29DC /* Build configuration list for PBXProject "FurnitureAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E25CA462933776B00CC29DC /* Debug */,
+				2E25CA472933776B00CC29DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E25CA482933776B00CC29DC /* Build configuration list for PBXNativeTarget "FurnitureAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E25CA492933776B00CC29DC /* Debug */,
+				2E25CA4A2933776B00CC29DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E25CA302933776900CC29DC /* Project object */;
+}
