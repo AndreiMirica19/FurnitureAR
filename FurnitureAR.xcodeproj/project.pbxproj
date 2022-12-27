@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E03AD45295AEA6100FB5567 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD44295AEA6100FB5567 /* HomeType.swift */; };
+		2E03AD47295B166A00FB5567 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD46295B166A00FB5567 /* CatalogueView.swift */; };
 		2E25CA3C2933776900CC29DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3B2933776900CC29DC /* AppDelegate.swift */; };
 		2E25CA3E2933776900CC29DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3D2933776900CC29DC /* ContentView.swift */; };
 		2E25CA402933776900CC29DC /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3F2933776900CC29DC /* Experience.rcproject */; };
@@ -17,9 +19,8 @@
 		2E25CA51293377B300CC29DC /* Desk.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2E25CA4E293377B300CC29DC /* Desk.usdz */; };
 		2E25CA542933781200CC29DC /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA522933781200CC29DC /* ProductView.swift */; };
 		2E25CA552933781200CC29DC /* TryOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA532933781200CC29DC /* TryOnView.swift */; };
-		2E25CA592933781B00CC29DC /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA562933781B00CC29DC /* CatalogueView.swift */; };
+		2E25CA592933781B00CC29DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA562933781B00CC29DC /* HomeView.swift */; };
 		2E25CA5A2933781B00CC29DC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA572933781B00CC29DC /* CartView.swift */; };
-		2E25CA5B2933781B00CC29DC /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA582933781B00CC29DC /* CategoryView.swift */; };
 		2E25CA5E29337BEE00CC29DC /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA5D29337BEE00CC29DC /* ThumbnailGenerator.swift */; };
 		2E25CA62293395F500CC29DC /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA61293395F500CC29DC /* Furniture.swift */; };
 		2E5F4E452949C86700E345B7 /* FurnitureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F4E442949C86700E345B7 /* FurnitureModel.swift */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		17667B38200F70065426BEDC /* Pods-FurnitureAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureAR.release.xcconfig"; path = "Target Support Files/Pods-FurnitureAR/Pods-FurnitureAR.release.xcconfig"; sourceTree = "<group>"; };
+		2E03AD44295AEA6100FB5567 /* HomeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
+		2E03AD46295B166A00FB5567 /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
 		2E25CA382933776900CC29DC /* FurnitureAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E25CA3B2933776900CC29DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E25CA3D2933776900CC29DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,9 +43,8 @@
 		2E25CA4E293377B300CC29DC /* Desk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Desk.usdz; sourceTree = "<group>"; };
 		2E25CA522933781200CC29DC /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		2E25CA532933781200CC29DC /* TryOnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryOnView.swift; sourceTree = "<group>"; };
-		2E25CA562933781B00CC29DC /* CatalogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
+		2E25CA562933781B00CC29DC /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2E25CA572933781B00CC29DC /* CartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
-		2E25CA582933781B00CC29DC /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		2E25CA5D29337BEE00CC29DC /* ThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGenerator.swift; sourceTree = "<group>"; };
 		2E25CA61293395F500CC29DC /* Furniture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furniture.swift; sourceTree = "<group>"; };
 		2E5F4E442949C86700E345B7 /* FurnitureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureModel.swift; sourceTree = "<group>"; };
@@ -118,10 +120,11 @@
 			children = (
 				2E25CA3D2933776900CC29DC /* ContentView.swift */,
 				2E25CA572933781B00CC29DC /* CartView.swift */,
-				2E25CA562933781B00CC29DC /* CatalogueView.swift */,
-				2E25CA582933781B00CC29DC /* CategoryView.swift */,
+				2E25CA562933781B00CC29DC /* HomeView.swift */,
 				2E25CA522933781200CC29DC /* ProductView.swift */,
 				2E25CA532933781200CC29DC /* TryOnView.swift */,
+				2E03AD44295AEA6100FB5567 /* HomeType.swift */,
+				2E03AD46295B166A00FB5567 /* CatalogueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,13 +294,14 @@
 				2E25CA5A2933781B00CC29DC /* CartView.swift in Sources */,
 				2E25CA552933781200CC29DC /* TryOnView.swift in Sources */,
 				2E5F4E4A2949D27700E345B7 /* ARViewExtension.swift in Sources */,
+				2E03AD45295AEA6100FB5567 /* HomeType.swift in Sources */,
+				2E03AD47295B166A00FB5567 /* CatalogueView.swift in Sources */,
 				2E5F4E452949C86700E345B7 /* FurnitureModel.swift in Sources */,
-				2E25CA592933781B00CC29DC /* CatalogueView.swift in Sources */,
+				2E25CA592933781B00CC29DC /* HomeView.swift in Sources */,
 				2E25CA3E2933776900CC29DC /* ContentView.swift in Sources */,
 				2E25CA5E29337BEE00CC29DC /* ThumbnailGenerator.swift in Sources */,
 				2E25CA3C2933776900CC29DC /* AppDelegate.swift in Sources */,
 				2E25CA62293395F500CC29DC /* Furniture.swift in Sources */,
-				2E25CA5B2933781B00CC29DC /* CategoryView.swift in Sources */,
 				2E25CA402933776900CC29DC /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

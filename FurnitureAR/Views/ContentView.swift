@@ -11,14 +11,22 @@ import RealityKit
 struct ContentView: View {
         var body: some View {
             TabView {
+                HomeView()
+                    .padding(.top)
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
                 CatalogueView()
                     .tabItem {
                         Label("Catalogue", systemImage: "book")
                     }
+                
                 TryOnView()
                     .tabItem {
                         Label("Try on", systemImage: "camera")
                     }
+                
                 CartView()
                     .tabItem {
                         Label("Cart", systemImage: "cart")
