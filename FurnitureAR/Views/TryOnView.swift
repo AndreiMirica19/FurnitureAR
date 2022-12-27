@@ -10,69 +10,72 @@ import RealityKit
 import ARKit
 
 struct TryOnView: View {
-    
-    var models = ["desk3", "BathroomDrawers", "Desk"]
+
+    @ObservedObject var furnitureModel = FurnitureModel(furniturePreviewSize: CGSize(width: 120, height: 120))
     @ObservedObject var thumbnailGenerator = ThumbnailGenerator()
-    @State var placementObject: String?
-    
-    
+    @State var placementObject: Furniture?
+
     var body: some View {
         ZStack(alignment: .bottom) {
             ARViewContainer(placementModel: $placementObject)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 30) {
-                    if thumbnailGenerator.thumbnailImage.count >= models.count {
-                        ForEach (0 ..< self.thumbnailGenerator.thumbnailImage.count)  { index in
-                            thumbnailGenerator.thumbnailImage[index].onTapGesture {
-                                placementObject = "d"
+                    ForEach(0 ..< furnitureModel.furnitureList.count) { index in
+                        furnitureModel.furnitureList[index].thumbnail.thumbnailImage
+                            .cornerRadius(16)
+                            .padding(4)
+                            .onTapGesture {
+                                placementObject = furnitureModel.furnitureList[index]
                             }
-                        }
                     }
                 }
-            }
-        }.onAppear {
-            for model in models {
-                thumbnailGenerator.generateThumbnail(for: model, size: CGSize(width: 120, height: 120))
             }
         }
     }
 }
 
 struct ARViewContainer: UIViewRepresentable {
-   @Binding var placementModel: String?
-    
+    @Binding var placementModel: Furniture?
+
     func makeUIView(context: Context) -> ARView {
-     
+ 
         let arView = ARView(frame: .zero)
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = [.horizontal, .vertical]
         config.environmentTexturing = .automatic
-        
+   
         if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
             config.sceneReconstruction = .mesh
         }
-        
+ 
         arView.session.run(config)
+        arView.enableObjectRemoval()
         return arView
-        
+   
     }
-    
+
     func updateUIView(_ uiView: ARView, context: Context) {
-        guard let placementModel = placementModel else {
+        guard var placementModel = placementModel else {
             return
         }
-
-        let modelEntity = try! ModelEntity.loadModel(named: "desk3.usdz")
-        let anchorEntity = AnchorEntity(plane: .any)
-        anchorEntity.addChild(modelEntity)
         
+        placementModel.fileName += ".usdz"
+        
+        guard let modelEntity = try? ModelEntity.loadModel(named: placementModel.fileName) else {
+            return
+        }
+        
+        let anchorEntity = AnchorEntity()
+        anchorEntity.addChild(modelEntity)
+        modelEntity.generateCollisionShapes(recursive: true)
+        
+        uiView.installGestures([.translation, .rotation, .scale], for: modelEntity)
         uiView.scene.addAnchor(anchorEntity)
     }
-    
 }
 
 struct TryOnView_Previews: PreviewProvider {
-
+    
     static var previews: some View {
         TryOnView(placementObject: nil)
     }

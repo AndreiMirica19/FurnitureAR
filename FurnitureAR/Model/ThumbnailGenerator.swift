@@ -11,7 +11,7 @@ import Combine
 import UIKit
 
 class ThumbnailGenerator: ObservableObject {
-    @Published var thumbnailImage: [Image] = []
+    @Published var thumbnailImage: Image?
     
     func generateThumbnail(for resource: String, withExtension: String = "usdz", size: CGSize) {
         
@@ -22,20 +22,25 @@ class ThumbnailGenerator: ObservableObject {
         
         let scale = UIScreen.main.scale
         
-        let request = QLThumbnailGenerator.Request(fileAt: url,
-                                                   size: size,
-                                                   scale: scale,
-                                                   representationTypes: .all)
+        let request = QLThumbnailGenerator.Request(
+            fileAt: url,
+            size: size,
+            scale: scale,
+            representationTypes: .all
+        )
         
         let generator = QLThumbnailGenerator.shared
         
-        generator.generateRepresentations(for: request) { (thumbnail, type, error) in
+        generator.generateRepresentations(for: request) { (thumbnail, _, error) in
             DispatchQueue.main.async {
                 if thumbnail == nil || error != nil {
-                    print ("Error generating thumbnail: \(error?.localizedDescription)")
+                    print ("Error generating thumbnail: \(String(describing: error?.localizedDescription))")
                     return
                 } else {
-                    self.thumbnailImage.append(Image(uiImage: thumbnail!.uiImage))
+                    guard let thumbnail = thumbnail else {
+                        return
+                    }
+                    self.thumbnailImage = (Image(uiImage: thumbnail.uiImage))
                 }
             }
         }

@@ -20,7 +20,7 @@ struct CatalogueView: View {
                 Section(header: Text("Explore")) {
                     ScrollView(.horizontal) {
                         LazyHGrid(rows: rows, alignment: .center, spacing: 16) {
-                            ForEach(0..<10, id: \.self) { item in
+                            ForEach(0..<10, id: \.self) { _ in
                                 CategoryView()
                                     .cornerRadius(16)
                                     .frame(width: 128)
@@ -38,7 +38,7 @@ struct CatalogueView: View {
                 Section(header: Text("Type of home")) {
                     ScrollView(.horizontal) {
                         LazyHGrid(rows: rows, alignment: .center, spacing: 16) {
-                            ForEach(0..<10, id: \.self) { item in
+                            ForEach(0..<10, id: \.self) { _ in
                                 CategoryView()
                                     .cornerRadius(16)
                                     .frame(width: 128)

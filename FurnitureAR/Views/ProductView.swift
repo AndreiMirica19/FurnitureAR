@@ -31,7 +31,7 @@ struct ProductView: View {
             
             Spacer()
             
-            HStack() {
+            HStack {
                 Button {
                     
                 } label: {
@@ -58,8 +58,6 @@ struct ProductView: View {
                 
             }
             .padding(16)
-            
-            
         }
     }
 }

@@ -16,7 +16,6 @@ struct CategoryView: View {
                 .padding()
                 .foregroundColor(.white)
       
-            
             Text("Descrition")
                 .font(.subheadline)
                 .padding(.leading)
