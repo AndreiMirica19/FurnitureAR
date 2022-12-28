@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E03AD45295AEA6100FB5567 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD44295AEA6100FB5567 /* HomeType.swift */; };
 		2E03AD47295B166A00FB5567 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD46295B166A00FB5567 /* CatalogueView.swift */; };
+		2E03AD49295B25FB00FB5567 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD48295B25FB00FB5567 /* ProductsView.swift */; };
 		2E25CA3C2933776900CC29DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3B2933776900CC29DC /* AppDelegate.swift */; };
 		2E25CA3E2933776900CC29DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3D2933776900CC29DC /* ContentView.swift */; };
 		2E25CA402933776900CC29DC /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3F2933776900CC29DC /* Experience.rcproject */; };
@@ -23,6 +24,11 @@
 		2E25CA5A2933781B00CC29DC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA572933781B00CC29DC /* CartView.swift */; };
 		2E25CA5E29337BEE00CC29DC /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA5D29337BEE00CC29DC /* ThumbnailGenerator.swift */; };
 		2E25CA62293395F500CC29DC /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA61293395F500CC29DC /* Furniture.swift */; };
+		2E3510E7295C79DC0091F153 /* SortBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3510E6295C79DC0091F153 /* SortBy.swift */; };
+		2E575081295C358B00216A7C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E575080295C358B00216A7C /* Category.swift */; };
+		2E575083295C367D00216A7C /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E575082295C367D00216A7C /* RoomType.swift */; };
+		2E575085295C372D00216A7C /* FurnitureBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E575084295C372D00216A7C /* FurnitureBrand.swift */; };
+		2E575087295C37D200216A7C /* FurnitureStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E575086295C37D200216A7C /* FurnitureStyle.swift */; };
 		2E5F4E452949C86700E345B7 /* FurnitureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F4E442949C86700E345B7 /* FurnitureModel.swift */; };
 		2E5F4E4A2949D27700E345B7 /* ARViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F4E492949D27700E345B7 /* ARViewExtension.swift */; };
 		82D23CD1E490ED5EDD5352A9 /* Pods_FurnitureAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE28DE965E8031D9C702745 /* Pods_FurnitureAR.framework */; };
@@ -32,6 +38,7 @@
 		17667B38200F70065426BEDC /* Pods-FurnitureAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureAR.release.xcconfig"; path = "Target Support Files/Pods-FurnitureAR/Pods-FurnitureAR.release.xcconfig"; sourceTree = "<group>"; };
 		2E03AD44295AEA6100FB5567 /* HomeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
 		2E03AD46295B166A00FB5567 /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
+		2E03AD48295B25FB00FB5567 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		2E25CA382933776900CC29DC /* FurnitureAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E25CA3B2933776900CC29DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E25CA3D2933776900CC29DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		2E25CA572933781B00CC29DC /* CartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		2E25CA5D29337BEE00CC29DC /* ThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGenerator.swift; sourceTree = "<group>"; };
 		2E25CA61293395F500CC29DC /* Furniture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furniture.swift; sourceTree = "<group>"; };
+		2E3510E6295C79DC0091F153 /* SortBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBy.swift; sourceTree = "<group>"; };
+		2E575080295C358B00216A7C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2E575082295C367D00216A7C /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
+		2E575084295C372D00216A7C /* FurnitureBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureBrand.swift; sourceTree = "<group>"; };
+		2E575086295C37D200216A7C /* FurnitureStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureStyle.swift; sourceTree = "<group>"; };
 		2E5F4E442949C86700E345B7 /* FurnitureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureModel.swift; sourceTree = "<group>"; };
 		2E5F4E492949D27700E345B7 /* ARViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewExtension.swift; sourceTree = "<group>"; };
 		40EAED6EDA5767C835B06410 /* Pods-FurnitureAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureAR.debug.xcconfig"; path = "Target Support Files/Pods-FurnitureAR/Pods-FurnitureAR.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +137,7 @@
 				2E25CA532933781200CC29DC /* TryOnView.swift */,
 				2E03AD44295AEA6100FB5567 /* HomeType.swift */,
 				2E03AD46295B166A00FB5567 /* CatalogueView.swift */,
+				2E03AD48295B25FB00FB5567 /* ProductsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +148,11 @@
 				2E25CA5D29337BEE00CC29DC /* ThumbnailGenerator.swift */,
 				2E5F4E442949C86700E345B7 /* FurnitureModel.swift */,
 				2E25CA61293395F500CC29DC /* Furniture.swift */,
+				2E575080295C358B00216A7C /* Category.swift */,
+				2E575082295C367D00216A7C /* RoomType.swift */,
+				2E575084295C372D00216A7C /* FurnitureBrand.swift */,
+				2E575086295C37D200216A7C /* FurnitureStyle.swift */,
+				2E3510E6295C79DC0091F153 /* SortBy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,11 +310,17 @@
 			files = (
 				2E25CA542933781200CC29DC /* ProductView.swift in Sources */,
 				2E25CA5A2933781B00CC29DC /* CartView.swift in Sources */,
+				2E575083295C367D00216A7C /* RoomType.swift in Sources */,
+				2E3510E7295C79DC0091F153 /* SortBy.swift in Sources */,
+				2E575081295C358B00216A7C /* Category.swift in Sources */,
 				2E25CA552933781200CC29DC /* TryOnView.swift in Sources */,
+				2E03AD49295B25FB00FB5567 /* ProductsView.swift in Sources */,
 				2E5F4E4A2949D27700E345B7 /* ARViewExtension.swift in Sources */,
 				2E03AD45295AEA6100FB5567 /* HomeType.swift in Sources */,
+				2E575087295C37D200216A7C /* FurnitureStyle.swift in Sources */,
 				2E03AD47295B166A00FB5567 /* CatalogueView.swift in Sources */,
 				2E5F4E452949C86700E345B7 /* FurnitureModel.swift in Sources */,
+				2E575085295C372D00216A7C /* FurnitureBrand.swift in Sources */,
 				2E25CA592933781B00CC29DC /* HomeView.swift in Sources */,
 				2E25CA3E2933776900CC29DC /* ContentView.swift in Sources */,
 				2E25CA5E29337BEE00CC29DC /* ThumbnailGenerator.swift in Sources */,

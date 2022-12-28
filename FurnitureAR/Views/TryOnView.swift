@@ -11,8 +11,7 @@ import ARKit
 
 struct TryOnView: View {
 
-    @ObservedObject var furnitureModel = FurnitureModel(furniturePreviewSize: CGSize(width: 120, height: 120))
-    @ObservedObject var thumbnailGenerator = ThumbnailGenerator()
+    @ObservedObject var furnitureModel = FurnitureModel.shared
     @State var placementObject: Furniture?
 
     var body: some View {

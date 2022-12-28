@@ -16,7 +16,7 @@ struct HomeView: View {
     
     let furnitureStyles = ["Contemporary", "Modern", "Retro", "Minimalist", "Vintage"]
     
-    let topBrands = ["Castlery", "Arhaus", "Lumens", "Sundays"]
+    let topBrands = ["Ikea", "Ashley", "Bob's", "Value City"]
     
     var body: some View {
         VStack {
@@ -39,7 +39,8 @@ struct HomeView: View {
                         ForEach(furnitureStyles, id: \.self) { style in
                             Text("\(style)")
                                 .padding()
-                                .background(.mint)
+                                .foregroundColor(Color("yellow"))
+                                .background(Color("darkBlue"))
                                 .cornerRadius(30)
                         }
                     }
@@ -50,7 +51,8 @@ struct HomeView: View {
                         ForEach(topBrands, id: \.self) { style in
                             Text("\(style)")
                                 .padding()
-                                .background(.mint)
+                                .foregroundColor(Color("yellow"))
+                                .background(Color("darkBlue"))
                                 .cornerRadius(30)
                         }
                     }
