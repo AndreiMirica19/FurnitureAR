@@ -8,9 +8,9 @@
 import Foundation
 
 enum FurnitureStyle: String {
-   case contemporary
-   case modern
-   case retro
-   case minimalist
-   case vintage
+   case contemporary = "Contemporary"
+   case modern = "Modern"
+   case retro = "Retro"
+   case minimalist = "Minimalist"
+   case vintage = "Vintage"
 }

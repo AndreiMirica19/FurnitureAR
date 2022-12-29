@@ -15,7 +15,7 @@ struct CatalogueView: View {
     var body: some View {
         NavigationView {
             List(categories, id: \.self) { category in
-                NavigationLink(destination: ProductsView(category: category).environmentObject(cardManager)) {
+                NavigationLink(destination: ProductsByCategoryView(category: category).environmentObject(cardManager)) {
                     Text(category)
                 }
             }

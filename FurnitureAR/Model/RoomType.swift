@@ -7,10 +7,10 @@
 
 import Foundation
 
-enum RoomType: String {
-   case livingroom
-   case bathroom
-   case bedroom
-   case kitchen
-   case workroom
+enum RoomType: String, CaseIterable {
+   case livingroom = "Livingroom"
+   case bathroom = "Bathroom"
+   case bedroom = "Bedroom"
+   case kitchen = "Kitchen"
+   case workroom = "Workroom"
 }

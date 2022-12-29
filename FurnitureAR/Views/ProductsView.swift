@@ -1,58 +1,63 @@
 //
-//  Products.swift
+//  ProductsView.swift
 //  FurnitureAR
 //
-//  Created by Andrei Mirica on 27.12.2022.
+//  Created by Andrei Mirica on 29.12.2022.
 //
 
 import SwiftUI
 
 struct ProductsView: View {
-    let columns = [
-        GridItem(.adaptive(minimum: 128)),
-        GridItem(.adaptive(minimum: 128))
-    ]
-    
-    let category: String
     let furnitureModel = FurnitureModel.shared
-    @State private var showingAlert = false
-    @State var orderBy = "relevance"
     @EnvironmentObject var cardManager: CardManager
-    
-    var orderOptions = ["relevance", "low to high", "high to low", "alphabetic"]
+    @State var categories: [String] = []
+    var filterBy: FilterBy
+    @State var furnitures: [Furniture] = []
+    var filterValue: String
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Text(category)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading)
-                    .padding(.top)
-                
-                Picker("Sort by", selection: $orderBy) {
-                    ForEach(self.orderOptions, id: \.self) { sort in
-                        Text("Sort by \(sort.capitalized)")
-                    }
+        List {
+            ForEach(categories, id: \.self) { category in
+                Section(header: Text(category)) {
                     
-                }
+                    TabView {
+                        ForEach(furnitureModel.filterBy(filter: filterBy, category: category, filterValue: filterValue), id: \.name) { furniture in
+                            ProductView(furniture: furniture)
+                                .frame(height: 516)
+                                .environmentObject(cardManager)
+                                .padding(.bottom)
+                            
+                        }.padding()
+                    }.tabViewStyle(.page)
+                        .frame(height: 528)
+                    
+                }.headerProminence(.increased)
+            }
+        }.onAppear {
+            switch filterBy {
+            case .room:
+                categories = furnitureModel.getCategoriesFilteredByRoom(room: filterValue)
+                    
+            case .style:
+                categories = furnitureModel.getCategoriesFilteredByStyle(style: filterValue)
+
+            case .manufacturer:
+                categories = furnitureModel.getCategoriesFilterdByBrand(brand: filterValue)
+                
+            case .category:
+                categories = furnitureModel.getCategoriesFilteredByRoom(room: filterValue)
                 
             }
-            
-            ForEach(furnitureModel.filterByCategory(category: category, orderBy: orderBy), id: \.name) { furniture in
-                ProductView(furniture: furniture)
-                    .frame(minHeight: 256)
-                    .environmentObject(cardManager)
-                Divider()
-                
-            }.padding()
         }
+    }
+    
+    func displayProducts(category: Category) {
+        
     }
 }
 
-struct Products_Previews: PreviewProvider {
+struct ProductsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductsView(category: "Sinks")
+        ProductsView(filterBy: .room, filterValue: "")
     }
 }
