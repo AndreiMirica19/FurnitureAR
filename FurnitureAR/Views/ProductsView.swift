@@ -17,6 +17,7 @@ struct ProductsView: View {
     let furnitureModel = FurnitureModel.shared
     @State private var showingAlert = false
     @State var orderBy = "relevance"
+    @EnvironmentObject var cardManager: CardManager
     
     var orderOptions = ["relevance", "low to high", "high to low", "alphabetic"]
     
@@ -28,7 +29,7 @@ struct ProductsView: View {
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading)
-                .padding(.top)
+                    .padding(.top)
                 
                 Picker("Sort by", selection: $orderBy) {
                     ForEach(self.orderOptions, id: \.self) { sort in
@@ -36,15 +37,15 @@ struct ProductsView: View {
                     }
                     
                 }
-
+                
             }
-
+            
             ForEach(furnitureModel.filterByCategory(category: category, orderBy: orderBy), id: \.name) { furniture in
-                if let thumbnail = furniture.thumbnail.thumbnailImage {
-                    ProductView(name: furniture.name, price: furniture.price, image: thumbnail, manufacturer: furniture.furnitureBrand.rawValue)
-                        .frame(minHeight: 256)
-                    Divider()
-                }
+                ProductView(furniture: furniture)
+                    .frame(minHeight: 256)
+                    .environmentObject(cardManager)
+                Divider()
+                
             }.padding()
         }
     }

@@ -8,7 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct Furniture {
+struct Furniture: Equatable {
+    static func == (lhs: Furniture, rhs: Furniture) -> Bool {
+        lhs.furnitureBrand == rhs.furnitureBrand && lhs.name == rhs.name
+    }
+    
     var name: String
     var price: Int
     var category: Category

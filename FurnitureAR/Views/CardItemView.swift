@@ -1,23 +1,20 @@
 //
-//  ProductView.swift
-//  FurnishYourHome
+//  CardItemView.swift
+//  FurnitureAR
 //
-//  Created by Andrei Mirica on 19.11.2022.
+//  Created by Andrei Mirica on 29.12.2022.
 //
 
 import SwiftUI
 
-struct ProductView: View {
-    
-    @EnvironmentObject var cardManager: CardManager
+struct CardItemView: View {
     var furniture: Furniture
-    @State var isAdded = false
-    
+    @EnvironmentObject var cardManager: CardManager
+
     var body: some View {
-        VStack(alignment: .center) {
+        VStack {
             if let image = furniture.thumbnail.thumbnailImage {
                 image
-                
                     .resizable()
                     .frame(width: 156, height: 128)
                     .scaledToFit()
@@ -74,7 +71,6 @@ struct ProductView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(Color("yellow"))
-                
             }
             
             Divider()
@@ -83,40 +79,53 @@ struct ProductView: View {
             
             HStack {
                 Button {
-                    
+                    cardManager.substractQuantity(furniture: furniture)
+
                 } label: {
-                    Text("Try on")
-                        .multilineTextAlignment(.leading)
-                        .fontWeight(.semibold)
-                        .font(.headline)
-                        .foregroundColor(Color("rose"))
-                }
-                
-                Spacer()
-                Button {
-                    if !cardManager.containsProduct(furniture: furniture) {
-                        cardManager.products.append((furniture, 1))
-                        isAdded = true
-                    }
-                    
-                } label: {
-                    Image(systemName: cardManager.containsProduct(furniture: furniture) ? "checkmark.seal.fill" : "cart.circle")
+                    Image(systemName: cardManager.getQuantityOfProduct(furniture: furniture) ?? 0 > 1 ? "minus.circle" : "trash.circle")
                         .resizable()
                         .frame(width: 44, height: 44)
                         .foregroundColor(Color("rose"))
                 }
-            }.padding(.top)
-            
+                
+                Spacer()
+                
+                ZStack {
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: 44, height: 44)
+
+                    if let quantity = cardManager.getQuantityOfProduct(furniture: furniture) {
+                        Text("\(quantity)")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                }
+                
+                Spacer()
+                
+                Button {
+                    cardManager.addQuantity(furniture: furniture)
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .frame(width: 44, height: 44)
+                        .foregroundColor(Color("rose"))
+                }
+
+            }
         }.padding()
             .background(Color("darkBlue"))
             .cornerRadius(25)
             .shadow(radius: 16)
+        
     }
 }
 
-struct ProductView_Previews: PreviewProvider {
+struct CardItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(furniture: Furniture(name: "name", price: 333, fileName: "", previewSize: CGSize(width: 128, height: 128), category: .sink, roomType: .bathroom, furnitureBrand: .bobs, furnitureStyle: .vintage))
+        let furniture = Furniture(name: "Shelf", price: 300, fileName: "", previewSize: CGSize(width: 128, height: 128), category: .sink, roomType: .bathroom, furnitureBrand: .bobs, furnitureStyle: .minimalist)
+        CardItemView(furniture: furniture)
             .frame(width: 256, height: 360)
     }
 }

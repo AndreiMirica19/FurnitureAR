@@ -31,7 +31,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Cart", systemImage: "cart")
                     }
-            }
+            }.environmentObject(CardManager())
         }
     }
 

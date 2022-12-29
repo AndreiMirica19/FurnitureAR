@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct CartView: View {
+    @EnvironmentObject var cardManager: CardManager
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack {
+                ForEach(cardManager.products, id: \.furniture.fileName) { furniture, _ in
+                    CardItemView(furniture: furniture)
+                        .environmentObject(cardManager)
+                        .frame(minHeight: 256)
+                        .padding()
+                }
+            }
+        }.padding(.top, 1)
     }
 }
 
