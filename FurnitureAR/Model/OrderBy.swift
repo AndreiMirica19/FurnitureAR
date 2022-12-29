@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SortBy: String {
+enum OrderBy: String {
     case relevance
     case lowToHigh = "low to high"
     case highToLow = "high to low"
