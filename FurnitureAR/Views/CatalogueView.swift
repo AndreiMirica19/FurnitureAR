@@ -9,14 +9,13 @@ import SwiftUI
 
 struct CatalogueView: View {
 
-    let categories = ["Chairs", "Beds", "Desks", "Couches", "Drawers", "Toilets", "Sinks"]
     @EnvironmentObject var cardManager: CardManager
 
     var body: some View {
         NavigationView {
-            List(categories, id: \.self) { category in
+            List(Category.allCases, id: \.self) { category in
                 NavigationLink(destination: ProductsByCategoryView(category: category).environmentObject(cardManager)) {
-                    Text(category)
+                    Text(category.rawValue)
                 }
             }
         }

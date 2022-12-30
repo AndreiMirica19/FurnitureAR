@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeType: View {
+struct RoomCard: View {
     let imageName: String
     let text: String
 
@@ -25,9 +25,9 @@ struct HomeType: View {
     }
 }
 
-struct HomeType_Previews: PreviewProvider {
+struct RoomPreview: PreviewProvider {
     static var previews: some View {
-        HomeType(imageName: "livingRoom", text: "Living room")
+        RoomCard(imageName: "livingRoom", text: "Living room")
             .frame(height: 450)
     }
 }

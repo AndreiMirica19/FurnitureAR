@@ -18,29 +18,11 @@ class FurnitureModel: ObservableObject {
         furnitureList.append(Furniture(name: "Futuristic Desk", price: 1000, fileName: "Desk", previewSize: furniturePreviewSize, category: .desk, roomType: .workroom, furnitureBrand: .bobs, furnitureStyle: .contemporary))
     }
     
-    func filterByCategory(category: String, orderBy: String) -> [Furniture] {
-        var categoryValue: Category
-        
-        switch category {
-        case "Desks":
-            categoryValue = .desk
-        case "Beds":
-            categoryValue = .bed
-        case "Chairs":
-            categoryValue = .chair
-        case "Chouches":
-            categoryValue = .couch
-        case "Toilets":
-            categoryValue = .toilet
-        case "Sinks":
-            categoryValue = .sink
-            
-        default:
-            return []
-        }
+    func filterByCategory(category: Category, orderBy: String) -> [Furniture] {
+
         
         let furnitures = furnitureList.filter { furniture in
-            return furniture.category == categoryValue
+            return furniture.category == category
         }
         
         let orderByValue = OrderBy(rawValue: orderBy)
@@ -64,37 +46,37 @@ class FurnitureModel: ObservableObject {
         
     }
     
-    func getCategoriesFilteredByRoom(room: String) -> [String] {
+    func getCategoriesFilteredByRoom(room: String) -> [Category] {
         let room = RoomType(rawValue: room)
 
         let furniture = furnitureList.filter { furniture in
             return furniture.roomType == room
         }
 
-        return Array(Set(furniture.map { $0.category.rawValue }))
+        return Array(Set(furniture.map { $0.category }))
     }
     
-    func getCategoriesFilteredByStyle(style: String) -> [String] {
+    func getCategoriesFilteredByStyle(style: String) -> [Category] {
         let style = FurnitureStyle(rawValue: style)
         
         let furniture = furnitureList.filter { furniture in
             return furniture.furnitureStyle == style
         }
         
-        return Array(Set(furniture.map { $0.category.rawValue }))
+        return Array(Set(furniture.map { $0.category }))
     }
     
-    func getCategoriesFilterdByBrand(brand: String) -> [String] {
+    func getCategoriesFilterdByBrand(brand: String) -> [Category] {
         let brand = FurnitureBrand(rawValue: brand)
         
         let furniture = furnitureList.filter { furniture in
             return furniture.furnitureBrand == brand
         }
         
-        return Array(Set(furniture.map { $0.category.rawValue }))
+        return Array(Set(furniture.map { $0.category }))
     }
     
-    func filterBy(filter: FilterBy, category: String, filterValue: String) -> [Furniture] {
+    func filterBy(filter: FilterBy, category: Category, filterValue: String) -> [Furniture] {
         let filteredFurniture = filterByCategory(category: category, orderBy: "Relevance")
 
         switch filter {

@@ -11,7 +11,6 @@ struct ProductView: View {
     
     @EnvironmentObject var cardManager: CardManager
     var furniture: Furniture
-    @State var isAdded = false
     
     var body: some View {
         VStack(alignment: .center) {
@@ -96,7 +95,6 @@ struct ProductView: View {
                 Button {
                     if !cardManager.containsProduct(furniture: furniture) {
                         cardManager.products.append((furniture, 1))
-                        isAdded = true
                     }
                     
                 } label: {

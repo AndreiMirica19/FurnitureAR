@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductsView: View {
     let furnitureModel = FurnitureModel.shared
     @EnvironmentObject var cardManager: CardManager
-    @State var categories: [String] = []
+    @State var categories: [Category] = []
     var filterBy: FilterBy
     @State var furnitures: [Furniture] = []
     var filterValue: String
@@ -18,7 +18,7 @@ struct ProductsView: View {
     var body: some View {
         List {
             ForEach(categories, id: \.self) { category in
-                Section(header: Text(category)) {
+                Section(header: Text(category.rawValue)) {
                     
                     TabView {
                         ForEach(furnitureModel.filterBy(filter: filterBy, category: category, filterValue: filterValue), id: \.name) { furniture in
@@ -49,10 +49,6 @@ struct ProductsView: View {
                 
             }
         }
-    }
-    
-    func displayProducts(category: Category) {
-        
     }
 }
 

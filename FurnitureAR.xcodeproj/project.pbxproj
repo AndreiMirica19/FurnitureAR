@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E03AD45295AEA6100FB5567 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD44295AEA6100FB5567 /* HomeType.swift */; };
+		2E03AD45295AEA6100FB5567 /* RoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD44295AEA6100FB5567 /* RoomCard.swift */; };
 		2E03AD47295B166A00FB5567 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD46295B166A00FB5567 /* CatalogueView.swift */; };
 		2E03AD49295B25FB00FB5567 /* ProductsByCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E03AD48295B25FB00FB5567 /* ProductsByCategoryView.swift */; };
 		2E25CA3C2933776900CC29DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CA3B2933776900CC29DC /* AppDelegate.swift */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		17667B38200F70065426BEDC /* Pods-FurnitureAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureAR.release.xcconfig"; path = "Target Support Files/Pods-FurnitureAR/Pods-FurnitureAR.release.xcconfig"; sourceTree = "<group>"; };
-		2E03AD44295AEA6100FB5567 /* HomeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
+		2E03AD44295AEA6100FB5567 /* RoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCard.swift; sourceTree = "<group>"; };
 		2E03AD46295B166A00FB5567 /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
 		2E03AD48295B25FB00FB5567 /* ProductsByCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsByCategoryView.swift; sourceTree = "<group>"; };
 		2E25CA382933776900CC29DC /* FurnitureAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +143,7 @@
 				2E25CA562933781B00CC29DC /* HomeView.swift */,
 				2E25CA522933781200CC29DC /* ProductView.swift */,
 				2E25CA532933781200CC29DC /* TryOnView.swift */,
-				2E03AD44295AEA6100FB5567 /* HomeType.swift */,
+				2E03AD44295AEA6100FB5567 /* RoomCard.swift */,
 				2E03AD46295B166A00FB5567 /* CatalogueView.swift */,
 				2E03AD48295B25FB00FB5567 /* ProductsByCategoryView.swift */,
 				2E3510EA295D71920091F153 /* CardItemView.swift */,
@@ -331,7 +331,7 @@
 				2E3510F1295DB4630091F153 /* FilterBy.swift in Sources */,
 				2E5F4E4A2949D27700E345B7 /* ARViewExtension.swift in Sources */,
 				2E3510EB295D71920091F153 /* CardItemView.swift in Sources */,
-				2E03AD45295AEA6100FB5567 /* HomeType.swift in Sources */,
+				2E03AD45295AEA6100FB5567 /* RoomCard.swift in Sources */,
 				2E3510E9295C80F80091F153 /* CardManager.swift in Sources */,
 				2E575087295C37D200216A7C /* FurnitureStyle.swift in Sources */,
 				2E03AD47295B166A00FB5567 /* CatalogueView.swift in Sources */,

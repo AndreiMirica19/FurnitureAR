@@ -13,7 +13,7 @@ struct ProductsByCategoryView: View {
         GridItem(.adaptive(minimum: 128))
     ]
     
-    let category: String
+    let category: Category
     let furnitureModel = FurnitureModel.shared
     @State private var showingAlert = false
     @State var orderBy = "relevance"
@@ -24,7 +24,7 @@ struct ProductsByCategoryView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text(category)
+                Text(category.rawValue)
                     .font(.title)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -53,6 +53,6 @@ struct ProductsByCategoryView: View {
 
 struct ProductsByCategory_Previews: PreviewProvider {
     static var previews: some View {
-        ProductsByCategoryView(category: "Sinks")
+        ProductsByCategoryView(category: .sink)
     }
 }

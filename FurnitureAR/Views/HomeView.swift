@@ -15,11 +15,6 @@ struct HomeView: View {
     ]
     
     @EnvironmentObject var cardManager: CardManager
-    
-    let furnitureStyles = ["Contemporary", "Modern", "Retro", "Minimalist", "Vintage"]
-    
-    let topBrands = ["Ikea", "Ashley", "Bob's", "Value City"]
-    
     @State var filterBy = FilterBy.room
     @State var filterValue = ""
     @State var isShowingFurniture = false
@@ -32,7 +27,7 @@ struct HomeView: View {
                     Section(header: Text("Search by room")) {
                         TabView {
                             ForEach(RoomType.allCases, id: \.self) { room in
-                                HomeType(imageName: room.rawValue.lowercased(), text: room.rawValue)
+                                RoomCard(imageName: room.rawValue.lowercased(), text: room.rawValue)
                                     .foregroundColor(.black)
                                     .onTapGesture {
                                         path.append(FilterData(filterBy: .room, filterValue: room.rawValue))
@@ -46,14 +41,14 @@ struct HomeView: View {
                     
                     Section(header: Text("Style")) {
                         LazyVGrid(columns: columns, spacing: 4) {
-                            ForEach(furnitureStyles, id: \.self) { style in
-                                Text("\(style)")
+                            ForEach(FurnitureStyle.allCases, id: \.self) { style in
+                                Text("\(style.rawValue)")
                                     .padding()
                                     .foregroundColor(Color("yellow"))
                                     .background(Color("darkBlue"))
                                     .cornerRadius(30)
                                     .onTapGesture {
-                                        path.append(FilterData(filterBy: .style, filterValue: style))
+                                        path.append(FilterData(filterBy: .style, filterValue: style.rawValue))
                                     }
                             }
                         }
