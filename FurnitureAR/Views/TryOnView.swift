@@ -19,57 +19,17 @@ struct TryOnView: View {
             ARViewContainer(placementModel: $placementObject)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 30) {
-                    ForEach(0 ..< furnitureModel.furnitureList.count) { index in
-                        furnitureModel.furnitureList[index].thumbnail.thumbnailImage
+                    ForEach(furnitureModel.furnitureList, id: \.fileName) { furniture in
+                        furniture.thumbnail.thumbnailImage
                             .cornerRadius(16)
                             .padding(4)
                             .onTapGesture {
-                                placementObject = furnitureModel.furnitureList[index]
+                                placementObject = furniture
                             }
                     }
                 }
             }
         }
-    }
-}
-
-struct ARViewContainer: UIViewRepresentable {
-    @Binding var placementModel: Furniture?
-
-    func makeUIView(context: Context) -> ARView {
- 
-        let arView = ARView(frame: .zero)
-        let config = ARWorldTrackingConfiguration()
-        config.planeDetection = [.horizontal, .vertical]
-        config.environmentTexturing = .automatic
-   
-        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
-            config.sceneReconstruction = .mesh
-        }
- 
-        arView.session.run(config)
-        arView.enableObjectRemoval()
-        return arView
-   
-    }
-
-    func updateUIView(_ uiView: ARView, context: Context) {
-        guard var placementModel = placementModel else {
-            return
-        }
-        
-        placementModel.fileName += ".usdz"
-        
-        guard let modelEntity = try? ModelEntity.loadModel(named: placementModel.fileName) else {
-            return
-        }
-        
-        let anchorEntity = AnchorEntity()
-        anchorEntity.addChild(modelEntity)
-        modelEntity.generateCollisionShapes(recursive: true)
-        
-        uiView.installGestures([.translation, .rotation, .scale], for: modelEntity)
-        uiView.scene.addAnchor(anchorEntity)
     }
 }
 
