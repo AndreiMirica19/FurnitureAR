@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FurnitureBrand: String, CaseIterable {
+enum FurnitureBrand: String, CaseIterable, Hashable {
    case ikea = "Ikea"
    case ashley = "Ashley"
    case bobs = "Bobs"

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FurnitureStyle: String, CaseIterable {
+enum FurnitureStyle: String, CaseIterable, Hashable {
    case contemporary = "Contemporary"
    case modern = "Modern"
    case retro = "Retro"

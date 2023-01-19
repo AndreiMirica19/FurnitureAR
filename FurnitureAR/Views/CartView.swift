@@ -12,13 +12,17 @@ struct CartView: View {
 
     var body: some View {
         ScrollView {
-            LazyVStack {
-                ForEach(cardManager.products, id: \.furniture.fileName) { furniture, _ in
-                    CardItemView(furniture: furniture)
-                        .environmentObject(cardManager)
-                        .frame(minHeight: 256)
-                        .padding()
+            if !cardManager.products.isEmpty {
+                LazyVStack {
+                    ForEach(cardManager.products, id: \.furniture.fileName) { furniture, _ in
+                        CardItemView(furniture: furniture)
+                            .environmentObject(cardManager)
+                            .frame(minHeight: 256)
+                            .padding()
+                    }
                 }
+            } else {
+                EmptyCardView()
             }
         }.padding(.top, 1)
     }

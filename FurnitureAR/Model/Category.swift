@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum Category: String, CaseIterable {
+enum Category: String, CaseIterable, Hashable {
     case desk = "Desks", chair = "Chairs", bed = "Beds", couch = "Chouches", drawer = "Drawers", toilet = "Toilets", sink = "Sinks"
 }

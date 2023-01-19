@@ -14,13 +14,28 @@ class FurnitureModel: ObservableObject {
     private init(furniturePreviewSize: CGSize) {
         
         furnitureList.append(Furniture(name: "Study desk", price: 300, fileName: "desk3", previewSize: furniturePreviewSize, category: .desk, roomType: .workroom, furnitureBrand: .ashley, furnitureStyle: .contemporary))
+        
         furnitureList.append(Furniture(name: "Bathroom Drawers", price: 1000, fileName: "BathroomDrawers", previewSize: furniturePreviewSize, category: .sink, roomType: .bathroom, furnitureBrand: .ashley, furnitureStyle: .vintage))
+        
         furnitureList.append(Furniture(name: "Futuristic Desk", price: 1000, fileName: "Desk", previewSize: furniturePreviewSize, category: .desk, roomType: .workroom, furnitureBrand: .bobs, furnitureStyle: .contemporary))
+//
+        furnitureList.append(Furniture(name: "Old Bed", price: 300, fileName: "Bed", previewSize: furniturePreviewSize, category: .bed, roomType: .bedroom, furnitureBrand: .valueCity, furnitureStyle: .retro))
+//        
+//        furnitureList.append(Furniture(name: "Black couch", price: 400, fileName: "couch_black", previewSize: furniturePreviewSize, category: .couch, roomType: .livingroom, furnitureBrand: .ikea, furnitureStyle: .contemporary))
+//
+        furnitureList.append(Furniture(name: "Futuristic chair", price: 880, fileName: "DesignChair1", previewSize: furniturePreviewSize, category: .chair, roomType: .kitchen, furnitureBrand: .valueCity, furnitureStyle: .contemporary))
+        
+        furnitureList.append(Furniture(name: "Desk chair", price: 880, fileName: "chair2", previewSize: furniturePreviewSize, category: .chair, roomType: .workroom, furnitureBrand: .ikea, furnitureStyle: .contemporary))
+//
+//        furnitureList.append(Furniture(name: "Modern desk", price: 900, fileName: "ModernDeskOBJ", previewSize: furniturePreviewSize, category: .desk, roomType: .workroom, furnitureBrand: .ashley, furnitureStyle: .modern))
+//
+//       furnitureList.append(Furniture(name: "Sofa", price: 2900, fileName: "sofa", previewSize: furniturePreviewSize, category: .couch, roomType: .livingroom, furnitureBrand: .valueCity, furnitureStyle: .contemporary))
+//
+//       furnitureList.append(Furniture(name: "Tables and chairs", price: 2900, fileName: "Table and Chairs", previewSize: furniturePreviewSize, category: .chair, roomType: .kitchen, furnitureBrand: .ashley, furnitureStyle: .modern))
     }
     
     func filterByCategory(category: Category, orderBy: String) -> [Furniture] {
 
-        
         let furnitures = furnitureList.filter { furniture in
             return furniture.category == category
         }
